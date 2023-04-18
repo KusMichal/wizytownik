@@ -26,7 +26,9 @@ class Base_contact:
 class BuisnessContact(Base_contact):
 
     def __init__(self, mobile_number,name,mail):
+        super().__init__(name,mail)
         self.mobile_number = mobile_number
+        
     def contact(self):
         return (f'Wybieram numer {self.mobile_number} dzwonie do {self.name} ')
 
